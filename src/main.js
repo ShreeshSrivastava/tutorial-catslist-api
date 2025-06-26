@@ -1,1 +1,3 @@
-const db = require("./db");
+const db = require('./db')
+
+// We want to bring in and initialize express here

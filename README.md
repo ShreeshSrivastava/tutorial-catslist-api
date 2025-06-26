@@ -9,7 +9,24 @@ This project is designed as a hands-on learning exercise for new developers to p
 - Working with a database
 - Using Git and GitHub effectively
 
+## 🧭 Project Overview
+
+This project starts as a simple CRUD API, but will eventually grow into a more complete backend service. Later stages may include:
+
+- Adding user accounts and authentication
+- Associating cats with owners
+- Introducing SQL joins between tables
+- Using environment variables for config
+
 ---
+
+## 📘 Resources
+
+- [Express Docs](https://expressjs.com/)
+- [SQLite Docs](https://sqlite.org/index.html)
+- [better-sqlite3 on npm](https://www.npmjs.com/package/better-sqlite3)
+- [Vitest Docs](https://vitest.dev)
+- [Supertest Docs](https://www.npmjs.com/package/supertest)
 
 ## 📝 To-Do List
 
@@ -40,3 +57,23 @@ This project is designed as a hands-on learning exercise for new developers to p
 - [ ] Push your code to GitHub
 - [ ] Open a pull request when you're done, with a clear summary of what you built
 - [ ] Use descriptive and consistent endpoint naming throughout
+
+## 🗃 Database
+
+We'll be using **SQLite** to store cat data in this project. This makes it easy to work with SQL and persist data without needing to set up a separate server.
+
+- Use the `better-sqlite3` package to create a SQLite database.
+- Create a table called `cats` with the following fields:
+  - `id` (INTEGER PRIMARY KEY AUTOINCREMENT)
+  - `name` (TEXT)
+  - `color` (TEXT)
+  - `description` (TEXT)
+  - `photoUrl` (TEXT — this should be a string URL; we are **not** storing image files)
+
+The database file should be saved inside a `data/` directory at the **root** of the project (e.g., `./data/cats.db`).
+
+### 💡 Extra Credit
+
+If you're feeling comfortable with the basics, try separating your database logic into a **repository layer** (e.g., `catsRepository.js`). This makes your code easier to test and maintain.
+
+Not sure what that means yet? Don't worry — we can talk through it later!
