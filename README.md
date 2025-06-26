@@ -32,6 +32,7 @@ This project starts as a simple CRUD API, but will eventually grow into a more c
 
 ### ✅ Required Tasks
 
+- [ ] Add the [Nodemon](https://www.npmjs.com/package/nodemon) NPM package to enable hot loading your development environment
 - [ ] Install the `express` package using npm
 - [ ] Set up the Express server in `index.js`
 - [ ] Create a SQLite database in `db.js` using `better-sqlite3`
