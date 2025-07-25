@@ -14,10 +14,12 @@
 import { describe, it, expect, beforeEach } from 'vitest'
 import request from 'supertest'
 import app from '../index' // Assumes your Express app is exported from index.js
+import db from '../db' // Importing the databse connection
 
 describe('Cats API', () => {
   beforeEach(async () => {
     // Optionally reset database state between tests
+    db.prepare('DELETE FROM cats').run()
   })
 
   it('GET /cats should return an empty array initially', async () => {
