@@ -1,6 +1,6 @@
 // server.js
 
-const app = require ('./index');
+const app = require ('./src/index');
 
 const PORT = 3000;
 app.listen(PORT, () => {
